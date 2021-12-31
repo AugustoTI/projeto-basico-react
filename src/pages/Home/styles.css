@@ -1,0 +1,16 @@
+.container {
+    min-height: 100vh;
+    background: #eee;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.search-container,
+.search-container h1 {
+    margin-bottom: 20px;
+}
