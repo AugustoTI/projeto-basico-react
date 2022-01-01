@@ -12,7 +12,7 @@ const Home = () => {
     const [posts, setPosts] = useState([]);
     const [allPosts, setAllPosts] = useState([]);
     const [page, setPage] = useState(0);
-    const [postsPerPage, setPostsPerPage] = useState(3);
+    const [postsPerPage] = useState(3);
     const [searchValue, setSearchValue] = useState('');
 
     const noMorePosts = page + postsPerPage >= allPosts.length;
@@ -24,6 +24,7 @@ const Home = () => {
 
     const loadPosts = useCallback(async (page, postsPerPage) => {
         const postsAndPhotos = await fetchPosts();
+
         setPosts(postsAndPhotos.slice(page, postsPerPage));
         setAllPosts(postsAndPhotos);
     }, []);
@@ -58,7 +59,7 @@ const Home = () => {
                 {!searchValue && (
                     <Button
                         disabled={noMorePosts}
-                        loadMorePosts={loadMorePosts}
+                        onClick={loadMorePosts}
                         text="Load More Posts"
                     />
                 )}
