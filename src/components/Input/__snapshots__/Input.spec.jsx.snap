@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should macth snapshot 1`] = `
+<input
+  class="search-input"
+  placeholder="Type your Search"
+  type="search"
+  value=""
+/>
+`;
